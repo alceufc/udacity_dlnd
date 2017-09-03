@@ -142,19 +142,16 @@ class SentimentNetwork:
             # DONE: Get the next review and its correct label
             review, label = training_reviews[i], training_labels[i]
             
-            # TODO: Implement the forward pass through the network. 
+            # DONE: Implement the forward pass through the network. 
             #       That means use the given review to update the input layer, 
             #       then calculate values for the hidden layer,
             #       and finally calculate the output layer.
             # 
             #       Do not use an activation function for the hidden layer,
             #       but use the sigmoid activation function for the output layer.
-
             # signals into hidden layer
-            hidden_inputs = np.dot(X, self.weights_input_to_hidden)
-            # signals from hidden layer
-            hidden_outputs = self.activation_function(hidden_inputs)
-
+            self.update_input_layer(review)
+            
             # DONE: Output layer - Replace these values with your calculations.
             # signals into final output layer
             final_inputs = np.dot(hidden_outputs, self.weights_hidden_to_output) 
