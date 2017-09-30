@@ -1,0 +1,176 @@
+conv1 = conv2d_maxpool(x, conv_num_outputs=64, 
+                        conv_ksize=(4, 4), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv2 = conv2d_maxpool(x, conv_num_outputs=128, 
+                        conv_ksize=(4, 4), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv_out = conv2
+fc_in = flatten(conv_out)
+
+fc1 = fully_conn(fc_in, 60)
+fc2 = fully_conn(fc1, 60)
+fc_out = fc2
+out = output(fc_out, out_label_total)
+    Checking the Training on a Single Batch...
+    Epoch  1, CIFAR-10 Batch 1:  Loss: 3968.721, Validation Accuracy: 0.15120
+    Epoch  2, CIFAR-10 Batch 1:  Loss: 2469.064, Validation Accuracy: 0.15640
+    Epoch  3, CIFAR-10 Batch 1:  Loss: 1765.192, Validation Accuracy: 0.17140
+    Epoch  4, CIFAR-10 Batch 1:  Loss: 1229.661, Validation Accuracy: 0.17760
+    Epoch  5, CIFAR-10 Batch 1:  Loss: 963.534, Validation Accuracy: 0.19080
+
+
+
+conv1 = conv2d_maxpool(x, conv_num_outputs=64, 
+                        conv_ksize=(5, 5), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv2 = conv2d_maxpool(x, conv_num_outputs=128, 
+                        conv_ksize=(5, 5), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))        
+conv_out = conv2
+
+fc_in = flatten(conv_out)
+fc1 = fully_conn(fc_in, 60)
+fc2 = fully_conn(fc1, 60)
+fc_out = fc2
+out = output(fc_out, out_label_total)
+    Epoch  1, CIFAR-10 Batch 1:  Loss: 3505.033, Validation Accuracy: 0.13060
+    Epoch  2, CIFAR-10 Batch 1:  Loss: 2492.238, Validation Accuracy: 0.14960
+    Epoch  3, CIFAR-10 Batch 1:  Loss: 1867.542, Validation Accuracy: 0.16880
+    Epoch  4, CIFAR-10 Batch 1:  Loss: 1519.978, Validation Accuracy: 0.16360
+    Epoch  5, CIFAR-10 Batch 1:  Loss: 1200.944, Validation Accuracy: 0.17740
+
+
+
+
+conv1 = conv2d_maxpool(x, conv_num_outputs=64, 
+                        conv_ksize=(3, 3), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv2 = conv2d_maxpool(x, conv_num_outputs=128, 
+                        conv_ksize=(3, 3), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))        
+conv_out = conv2
+
+fc_in = flatten(conv_out)
+fc1 = fully_conn(fc_in, 60)
+fc2 = fully_conn(fc1, 60)
+fc_out = fc2
+out = output(fc_out, out_label_total)
+    Checking the Training on a Single Batch...
+    Epoch  1, CIFAR-10 Batch 1:  Loss: 3869.956, Validation Accuracy: 0.13880
+    Epoch  2, CIFAR-10 Batch 1:  Loss: 2246.888, Validation Accuracy: 0.16080
+    Epoch  3, CIFAR-10 Batch 1:  Loss: 1616.236, Validation Accuracy: 0.17220
+    Epoch  4, CIFAR-10 Batch 1:  Loss: 1256.809, Validation Accuracy: 0.18240
+    Epoch  5, CIFAR-10 Batch 1:  Loss: 914.674, Validation Accuracy: 0.19000
+
+
+
+conv1 = conv2d_maxpool(x, conv_num_outputs=64, 
+                        conv_ksize=(4, 4), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv2 = conv2d_maxpool(conv1, conv_num_outputs=128, 
+                        conv_ksize=(4, 4), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv_out = conv2
+
+fc_in = flatten(conv_out)
+fc1 = fully_conn(fc_in, 60)
+fc2 = fully_conn(fc1, 60)
+fc_out = fc2
+out = output(fc_out, out_label_total)
+    Checking the Training on a Single Batch...
+    Epoch  1, CIFAR-10 Batch 1:  Loss: 32013.271, Validation Accuracy: 0.14900
+    Epoch  2, CIFAR-10 Batch 1:  Loss: 20410.598, Validation Accuracy: 0.15820
+    Epoch  3, CIFAR-10 Batch 1:  Loss: 16451.264, Validation Accuracy: 0.16740
+    Epoch  4, CIFAR-10 Batch 1:  Loss: 12961.659, Validation Accuracy: 0.18080
+    Epoch  5, CIFAR-10 Batch 1:  Loss: 9662.619, Validation Accuracy: 0.18820
+    Epoch  6, CIFAR-10 Batch 1:  Loss: 7613.759, Validation Accuracy: 0.19300
+    Epoch  7, CIFAR-10 Batch 1:  Loss: 6314.924, Validation Accuracy: 0.19620
+    Epoch  8, CIFAR-10 Batch 1:  Loss: 5333.802, Validation Accuracy: 0.20180
+    Epoch  9, CIFAR-10 Batch 1:  Loss: 4557.261, Validation Accuracy: 0.19780
+    Epoch 10, CIFAR-10 Batch 1:  Loss: 3925.009, Validation Accuracy: 0.20100
+
+
+
+conv1 = conv2d_maxpool(x, conv_num_outputs=8, 
+                        conv_ksize=(5, 5), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv2 = conv2d_maxpool(conv1, conv_num_outputs=64, 
+                        conv_ksize=(4, 4), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv3 = conv2d_maxpool(conv2, conv_num_outputs=128, 
+                        conv_ksize=(3, 3), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv_out = conv3
+
+fc_in = flatten(conv_out)
+fc1 = fully_conn(fc_in, 60)
+fc2 = fully_conn(fc1, 60)
+fc_out = fc2
+out = output(fc_out, out_label_total)
+    Checking the Training on a Single Batch...
+    Epoch  1, CIFAR-10 Batch 1:  Loss: 155478.344, Validation Accuracy: 0.11020
+    Epoch  2, CIFAR-10 Batch 1:  Loss: 92307.008, Validation Accuracy: 0.12760
+    Epoch  3, CIFAR-10 Batch 1:  Loss: 61792.039, Validation Accuracy: 0.14460
+    Epoch  4, CIFAR-10 Batch 1:  Loss: 41838.195, Validation Accuracy: 0.15440
+    Epoch  5, CIFAR-10 Batch 1:  Loss: 32742.621, Validation Accuracy: 0.16080
+    Epoch  6, CIFAR-10 Batch 1:  Loss: 25667.766, Validation Accuracy: 0.16500
+    Epoch  7, CIFAR-10 Batch 1:  Loss: 21778.975, Validation Accuracy: 0.17000
+    Epoch  8, CIFAR-10 Batch 1:  Loss: 20663.082, Validation Accuracy: 0.17300
+    Epoch  9, CIFAR-10 Batch 1:  Loss: 16988.295, Validation Accuracy: 0.17220
+    Epoch 10, CIFAR-10 Batch 1:  Loss: 13503.260, Validation Accuracy: 0.16440
+
+
+
+conv1 = conv2d_maxpool(x, conv_num_outputs=64, 
+                        conv_ksize=(4, 4), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv2 = conv2d_maxpool(conv1, conv_num_outputs=128, 
+                        conv_ksize=(4, 4), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv_out = conv2
+
+fc_in = flatten(conv_out)
+fc1 = fully_conn(fc_in, 60)
+fc2 = fully_conn(fc1, 60)
+fc3 = fully_conn(fc2, 60)
+fc_out = fc3
+out = output(fc_out, out_label_total)
+    Checking the Training on a Single Batch...
+    Epoch  1, CIFAR-10 Batch 1:  Loss: 172526.000, Validation Accuracy: 0.11700
+    Epoch  2, CIFAR-10 Batch 1:  Loss: 92106.750, Validation Accuracy: 0.13220
+    Epoch  3, CIFAR-10 Batch 1:  Loss: 63103.387, Validation Accuracy: 0.14580
+    Epoch  4, CIFAR-10 Batch 1:  Loss: 46989.727, Validation Accuracy: 0.14920
+    Epoch  5, CIFAR-10 Batch 1:  Loss: 39825.664, Validation Accuracy: 0.14440
+    Epoch  6, CIFAR-10 Batch 1:  Loss: 30533.600, Validation Accuracy: 0.15100
+    Epoch  7, CIFAR-10 Batch 1:  Loss: 22347.926, Validation Accuracy: 0.14660
+    Epoch  8, CIFAR-10 Batch 1:  Loss: 16425.443, Validation Accuracy: 0.13940
+    Epoch  9, CIFAR-10 Batch 1:  Loss: 14799.606, Validation Accuracy: 0.13700
+    Epoch 10, CIFAR-10 Batch 1:  Loss: 10630.174, Validation Accuracy: 0.13000
+
+
+
+
+
+conv1 = conv2d_maxpool(x, conv_num_outputs=256, 
+                        conv_ksize=(4, 4), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv2 = conv2d_maxpool(conv1, conv_num_outputs=512, 
+                        conv_ksize=(4, 4), conv_strides=(1, 1), 
+                        pool_ksize=(2, 2), pool_strides=(2, 2))
+conv_out = conv2
+
+fc_in = flatten(conv_out)
+fc1 = fully_conn(fc_in, 256)
+fc2 = fully_conn(fc1, 256)
+fc_out = fc2
+out = output(fc_out, out_label_total)
+    Checking the Training on a Single Batch...
+    Epoch  1, CIFAR-10 Batch 1:  Loss: 357716.406, Validation Accuracy: 0.24520
+    Epoch  2, CIFAR-10 Batch 1:  Loss: 188069.172, Validation Accuracy: 0.27820
+    Epoch  3, CIFAR-10 Batch 1:  Loss: 135076.500, Validation Accuracy: 0.29660
+    Epoch  4, CIFAR-10 Batch 1:  Loss: 78312.672, Validation Accuracy: 0.31020
+    Epoch  5, CIFAR-10 Batch 1:  Loss: 75589.219, Validation Accuracy: 0.32000
+    Epoch  6, CIFAR-10 Batch 1:  Loss: 48428.156, Validation Accuracy: 0.31820
+    Epoch  7, CIFAR-10 Batch 1:  Loss: 45257.086, Validation Accuracy: 0.33400
+    Epoch  8, CIFAR-10 Batch 1:  Loss: 36046.234, Validation Accuracy: 0.31700
+    Epoch  9, CIFAR-10 Batch 1:  Loss: 29234.074, Validation Accuracy: 0.35440
