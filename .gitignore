@@ -108,3 +108,7 @@ ENV/
 tv-script-generation/submission.zip
 language-translation/params.p
 language-translation/preprocess.p
+batch-norm/MNIST_data/t10k-images-idx3-ubyte.gz
+batch-norm/MNIST_data/t10k-labels-idx1-ubyte.gz
+batch-norm/MNIST_data/train-images-idx3-ubyte.gz
+batch-norm/MNIST_data/train-labels-idx1-ubyte.gz
